@@ -14,14 +14,14 @@ module.exports = {
   },
   optimization: {
     minimizer: [
-      new TerserPlugin({
-        // Use multi-process parallel running to improve the build speed
-        // Default number of concurrent runs: os.cpus().length - 1
-        parallel: true,
-        // Enable file caching
-        cache: true,
-        sourceMap: true,
-      }),
+      // new TerserPlugin({
+      //   // Use multi-process parallel running to improve the build speed
+      //   // Default number of concurrent runs: os.cpus().length - 1
+      //   parallel: true,
+      //   // Enable file caching
+      //   cache: true,
+      //   sourceMap: true,
+      // }),
       new OptimizeCSSAssetsPlugin(),
     ],
     // Automatically split vendor and commons
@@ -44,7 +44,7 @@ module.exports = {
     },
     // Keep the runtime chunk seperated to enable long term caching
     // https://twitter.com/wSokra/status/969679223278505985
-    runtimeChunk: true,
+    runtimeChunk: false,
   },
 
   module: {

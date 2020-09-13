@@ -5,6 +5,7 @@ import { connect } from "react-redux"
 
 import Sketch2 from "../p5/sketch2";
 import Sketch from "../p5/sketch";
+import Dot from "../p5/dot";
 
 class ProjectsPage extends Component {
   constructor(props) {
@@ -22,6 +23,7 @@ class ProjectsPage extends Component {
 
   render() {
     return (<div >
+      <Dot />
       <Sketch />
       {/* <Sketch2 /> */}
     </div>)

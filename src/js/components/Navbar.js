@@ -48,8 +48,8 @@ class Navbar extends Component {
         {/* <li onClick={this.handleClick}><Link to={"/information"} >INFO</Link></li> */}
         {/* <li onClick={this.handleClick}><Link to={"/"} >CORONA TRACKER</Link></li> */}
         {/* <li onClick={this.handleClick}><Link to={"/statistics"} >STATS</Link></li> */}
-        <li onClick={this.handleClick}><Link to={"/about"} >about</Link></li>
-        <li onClick={this.handleClick}><Link to={"/work"} >work</Link></li>
+        {/* <li onClick={this.handleClick}><Link to={"/about"} >about</Link></li> */}
+        {/* <li onClick={this.handleClick}><Link to={"/work"} >work</Link></li> */}
         {/* <li className="logo">
           <Link to={"/"} ></Link>
         </li> */}

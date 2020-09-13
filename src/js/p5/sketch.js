@@ -26,9 +26,9 @@ class Sketch extends React.Component {
         //const PALLATE = ["#333232", "#4c5454", "#f3a712", "#db2b39", "#447604"];
         //const PALLATE = ["#30bced", "#d16014", "#e3e4db", "#23395b", "#050401"];
         //const PALLATE = ["#26547c", "#ef476f", "#ffd166", "#23af82", "#fcfcfc"];
-        //const PALLATE = ["#900c3f", "#c70039", "#ffd166", "#ff5733", "#ffc300"];
+        const PALLATE = ["#900c3f", "#c70039", "#ffd166", "#ff5733", "#ffc300"];
         //const PALLATE = ["#a0006b", "#ffb533", "#f95c41", "#9ec630", "#ff959b"];
-        const PALLATE = ["#fc0015", "#023ba8", "#cccccc", "#dddddd", "#000000"];
+        // const PALLATE = ["#fc0015", "#023ba8", "#cccccc", "#dddddd", "#000000"];
 
         //Pestal color
         //const PALLATE = ['#E8614F', '#F3F2DB', '#79C3A7', '#668065', '#4B3331'];
