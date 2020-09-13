@@ -59,7 +59,7 @@ class Dot extends React.Component {
             //Render Texture
             createTexture()
             //LOOP
-            for (var i = 0; i < 500; i++) {
+            for (var i = 0; i < 100; i++) {
                 var vehicle = new Vehicle(p5.random(0, WIDTH), p5.random(0, HEIGHT));
                 vehicles.push(vehicle);
             }
