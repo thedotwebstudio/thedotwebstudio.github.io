@@ -31,26 +31,26 @@ footer {
             }
         }
     }
-    @media (max-width: $to-small) {
-        position: relative;
-        text-align: center;
-        ul {
-            margin: 0px;
-            li {
-                margin: 0px;
-                a {
-                    margin-right: 0px;
-                    color: #ffffff;
-                    font-size: 1.5rem;
-                    letter-spacing: 1.5px;
-                    span {
-                        font-size: inherit;
-                        color: #0084ff;
-                    }
-                }
-            }
-        }
-    }
+    // @media (max-width: $to-small) {
+    //     position: relative;
+    //     text-align: center;
+    //     ul {
+    //         margin: 0px;
+    //         li {
+    //             margin: 0px;
+    //             a {
+    //                 margin-right: 0px;
+    //                 color: #ffffff;
+    //                 font-size: 1.5rem;
+    //                 letter-spacing: 1.5px;
+    //                 span {
+    //                     font-size: inherit;
+    //                     color: #0084ff;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
     @media (min-width: $from-small) and (max-width: $to-medium) {}
     @media (min-width: $from-medium) and (max-width: $to-large) {}
     @media (min-width: $from-large) and (max-width: $to-huge) {}

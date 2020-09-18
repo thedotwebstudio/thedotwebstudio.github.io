@@ -34,10 +34,10 @@ class Dot extends React.Component {
         //const PALLATE = ["#26547c", "#ef476f", "#ffd166", "#23af82", "#fcfcfc"];
         //const PALLATE = ["#900c3f", "#c70039", "#ffd166", "#ff5733", "#ffc300"];
         //const PALLATE = ["#a0006b", "#ffb533", "#f95c41", "#9ec630", "#ff959b"];
-        const PALLATE = ["#fc0015", "#023ba8", "#cccccc", "#dddddd", "#000000"];
+        //const PALLATE = ["#fc0015", "#023ba8", "#cccccc", "#dddddd", "#000000"];
 
         //Pestal color
-        //const PALLATE = ['#E8614F', '#F3F2DB', '#79C3A7', '#668065', '#4B3331'];
+        const PALLATE = ['#E8614F', '#F3F2DB', '#79C3A7', '#668065', '#4B3331'];
 
         let TEXTURE;
         let BG;
@@ -51,31 +51,18 @@ class Dot extends React.Component {
         p5.setup = () => {
             p5.createCanvas(WIDTH, HEIGHT);
             // p5.angleMode(DEGREES);
-            TEXTURE = p5.createGraphics(WIDTH, HEIGHT);
-            let bgNum = p5.int(p5.random(PALLATE.length));
-            let BG = PALLATE[bgNum];
-            p5.background(BG);
-            PALLATE.splice(bgNum, 1);
-            //Render Texture
-            createTexture()
             //LOOP
             for (var i = 0; i < 100; i++) {
-                var vehicle = new Vehicle(p5.random(0, WIDTH), p5.random(0, HEIGHT));
+                let randColor = p5.random(PALLATE)
+                var vehicle = new Vehicle(p5.random(0, WIDTH), p5.random(0, HEIGHT), randColor);
                 vehicles.push(vehicle);
             }
         };
-        function createTexture() {
-            for (let i = 0; i < 100000; i = i + 1) {
-                p5.stroke(255, 15);
-                let px = p5.random(WIDTH);
-                let py = p5.random(HEIGHT);
-                p5.point(px, py);
-            }
-        }
+
         // Draw function
         // ======================================
         p5.draw = () => {
-            p5.background(0);
+            p5.background(255);
             // background(255, 245, 232);
             for (var i = 0; i < vehicles.length; i++) {
                 var v = vehicles[i];
@@ -86,18 +73,20 @@ class Dot extends React.Component {
         }
 
         class Vehicle {
-            constructor(x, y) {
-                this.pos = p5.createVector(p5.random(500), p5.random(500));
+            constructor(x, y, randColor) {
+                // this.pos = p5.createVector(p5.random(WIDTH / 2), p5.random(HEIGHT / 2));
+                this.pos = p5.createVector(WIDTH / 2, HEIGHT / 2);
                 this.target = p5.createVector(x, y);
                 this.vel = p5.constructor.Vector.random2D();
                 this.acc = p5.createVector();
                 this.r = 8;
                 this.maxSpeed = 10;
                 this.maxForce = 1;
+                this.color = randColor;
             }
             show() {
-                p5.stroke(255);
-                p5.strokeWeight(1);
+                p5.stroke(this.color);
+                p5.strokeWeight(3);
                 p5.point(this.pos.x, this.pos.y);
                 // vertex(this.pos.x, this.pos.y);
             }
@@ -144,16 +133,6 @@ class Dot extends React.Component {
                 this.acc.mult(0);
             }
         }
-        //Save Image
-        function keyReleased() {
-            //Only year-month-date
-            var day = new Date().toISOString().split('T')[0];
-            //Only year-month-date-time
-            var timestamp = new Date().toISOString();
-            if (key == 's' || key == 'S') saveCanvas(timestamp, 'png');
-            if (keyCode == DELETE || keyCode == BACKSPACE) clear();
-        }
-
     }
 
     componentDidMount() {

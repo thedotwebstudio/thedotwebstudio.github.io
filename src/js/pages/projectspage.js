@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { connect } from "react-redux"
 // import { Motion, spring } from 'react-motion';
 
-import Sketch2 from "../p5/sketch2";
-import Sketch from "../p5/sketch";
+// import Sketch2 from "../p5/sketch2";
+// import Sketch from "../p5/sketch";
 import Dot from "../p5/dot";
 
 class ProjectsPage extends Component {
@@ -22,9 +22,10 @@ class ProjectsPage extends Component {
   componantWillMount() { }
 
   render() {
-    return (<div >
+    return (<div className="dot-container">
+      <div className="the-dot">the dot</div>
       <Dot />
-      <Sketch />
+      {/* <Sketch /> */}
       {/* <Sketch2 /> */}
     </div>)
   }
