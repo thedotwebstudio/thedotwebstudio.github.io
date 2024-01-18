@@ -1,0 +1,34 @@
+.achivment {
+  //    border: 1px solid red;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  .title-subtitle {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    h3 {
+      text-align: center;
+      width: 80%;
+      margin: 0;
+    }
+    p {
+      text-align: center;
+      width: 80%;
+    }
+  }
+  // span {
+  //   display: block;
+  //   width: 4px;
+  //   height: 4px;
+  //   border-radius: 2px;
+  //   margin: 1rem 0;
+  //   background-color: $primary;
+  //   margin-left: -2px;
+  //   left: 50%;
+  // }
+}

@@ -1,0 +1,48 @@
+// @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,900&display=swap");
+
+//RUBIK
+// @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+
+//DOSIS
+//@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+
+//POPPINS
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+
+  body {
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  @media screen and (min-width: 810px) and (max-width: 1439px) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: 811px) {
+    font-size: 14px;
+  }
+}
+
+section {
+  padding: 2rem 1rem;
+}
+.progress-bar {
+  height: 1px;
+  width: 100%;
+  background: orange;
+}
+.anim-word {
+  display: flex;
+  flex-wrap: wrap;
+  .word {
+    margin-right: 12px;
+    position: relative;
+    .shadow {
+      position: absolute;
+      opacity: 0.1;
+    }
+  }
+}

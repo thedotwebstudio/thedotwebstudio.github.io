@@ -1,0 +1,11 @@
+.hello-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content:  center;
+    justify-content: center;
+    align-items: center;
+    // padding: 2rem 1rem;
+    background: $primary;
+    color: $white;
+}

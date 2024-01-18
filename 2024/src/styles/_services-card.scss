@@ -1,0 +1,74 @@
+.nav-services {
+  ul.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: stretch;
+    position: relative;
+    li {
+      width: 33.3333333333%;
+      width: 50%;
+      padding: 16px;
+
+      a.card {
+        width: 100%;
+        display: block;
+        height: 100%;
+        overflow: hidden;
+        padding: 3vw;
+        position: relative;
+        width: 100%;
+        text-decoration: none;
+        color: black;
+        border: 1px solid $primary;
+        border-radius: 16px;
+
+        .title {
+          // font-size: 3rem;
+          // font-weight: 700;
+          // margin-bottom: 1.5rem;
+        }
+        p {
+          // margin-bottom: 1.5rem;
+          // margin: 2rem 0;
+        }
+        .discover {
+          // font-size: 2rem;
+          font-weight: normal;
+        }
+        &:hover {
+          span {
+            img {
+              color: red;
+            }
+          }
+        }
+      } 
+    } 
+  }
+  @media screen and (min-width: 810px) and (max-width: 1439px) {
+  }
+  @media screen and (max-width: 811px) {
+    ul.cards {
+      li {
+        width: 100%;
+        padding: 16px 4px;
+        a.card {
+          .title {
+          }
+          p {
+          }
+          .discover {
+          }
+          &:hover {
+            span {
+              img {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

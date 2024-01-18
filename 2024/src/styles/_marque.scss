@@ -1,0 +1,33 @@
+.marque {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  min-height: 50vh;
+  margin-left: -2rem;
+    margin-right: -2rem;
+  h3{
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+  }
+  div {
+    display: flex;
+    flex-direction: row;
+    // flex-wrap: nowrap;
+    align-items: center;
+    padding: 2rem;
+    span {
+      display: block;
+      border-radius: 15px;
+      width: 20px;
+      height: 20px;
+      color: #ff4500;
+      background-image: -webkit-linear-gradient(
+        45deg,
+        #ff4500 18%,
+        #ff9800 78%
+      );
+    }
+  }
+}

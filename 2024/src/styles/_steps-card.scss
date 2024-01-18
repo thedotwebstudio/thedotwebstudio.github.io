@@ -1,0 +1,39 @@
+.nav-steps {
+  ul.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    align-items: stretch;
+    li {
+      width: 33.3333333333%;
+      padding: 1rem;
+      div.card {
+        width: 100%;
+        border-top: 1px solid $primary;
+        display: block;
+        height: 100%;
+        overflow: hidden;
+        padding: 3vw;
+        position: relative;
+        width: 100%;
+        text-decoration: none;
+        color: black;
+        .title {
+          font-size: 2rem;
+          font-weight: 700;
+          margin-bottom: 1.5rem;
+        }
+        p {
+          margin-bottom: 1.5rem;
+          margin: 2rem 0;
+          color: $gray;
+        }
+        .discover {
+          font-size: 2rem;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.main-wrapper {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  min-height: 100vh;
+  z-index: 2;
+  background-color: $white;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 100vh;
+  @media screen and (max-width: 767px) {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}

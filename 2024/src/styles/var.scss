@@ -1,0 +1,23 @@
+// Colors 
+$white: #ffffff;
+$black: #0F0F11;
+$gray : #6E6E6E;
+$body-bg: #ffecec;
+$primary: #ff4500; //orangered
+// $primary: #E96211;
+$secondary: #ffb180;
+// Breakpoints
+$layout-breakpoint-large: 1920px;
+$layout-breakpoint-medium: 1440px;
+$layout-breakpoint-small: 960px;
+$layout-breakpoint-xsmall: 480px;
+
+a {
+}
+ul {
+    padding: 0px;
+    margin: 0px;
+  li {
+    list-style: none;
+  }
+}

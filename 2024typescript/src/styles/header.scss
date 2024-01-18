@@ -1,0 +1,38 @@
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: space-between;
+  color: $white;
+  position: relative;
+  background-color: $white;
+  z-index: 2;
+  padding: 1rem 1rem 0 1rem;
+
+  a {
+    color: $primary;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    span {
+      color: $black;
+      font-weight: 100;
+    }
+  }
+  nav {
+    ul {
+        display: flex;
+      li {
+        a {
+            padding: 1rem 0.5rem;
+            font-size: 1rem;
+            color: $black;
+            font-weight: 400;
+            text-decoration: none;
+        }
+      }
+    }
+  }
+}

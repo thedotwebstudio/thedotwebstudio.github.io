@@ -1,0 +1,66 @@
+.hero-banner {
+  z-index: 100;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  // border: 1px solid $primary;
+  // background-color: rgb(169, 169, 169);
+  background-image: url("../images/Binary_001.png");
+  // background-image: url('../images/hero-white.png');
+  background-position: 125% -50%;
+  background-size: auto;
+  background-repeat: no-repeat;
+  margin-left: -2rem;
+  margin-right: -2rem;
+  color: $black;
+  h1 {
+    text-align: center;
+    word-wrap: break-word;
+    background: linear-gradient(316deg, #414345 27%, #0f0f11 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  h5 {
+    text-align: center;
+    span{
+      font-weight: 700;
+      color: #ff4500;
+    }
+  }
+  .cta {
+    width: 100%;
+    padding: 1rem 0px;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  @media screen and (min-width: 810px) and (max-width: 1439px) {
+    // font-size: 15px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  @media screen and (max-width: 811px) {
+    justify-content: flex-end;
+    // font-size: 14px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-position: -25% -50%;
+    background-size: 150%;
+    .cta {
+      margin-bottom: 4rem;
+    }
+    h1 {
+      font-size: 3.5rem;
+      text-align: left;
+    }
+    h5 {
+      font-size: 1rem;
+      text-align: left;
+    }
+  }
+}
