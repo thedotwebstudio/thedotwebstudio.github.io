@@ -147,7 +147,7 @@ function Header() {
             />
             <motion.div variants={fadeInVariant} className="contact">
               <h6>+91 98216 72735</h6>
-              <h6>hi@designagency.com</h6>
+              <h6>thedotwebstudio@gmail.com</h6>
             </motion.div>
           </motion.div>
         </motion.nav>
