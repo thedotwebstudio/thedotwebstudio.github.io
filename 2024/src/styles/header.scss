@@ -26,6 +26,25 @@ nav {
 
   .logo-container {
     overflow-y: hidden;
+    a {
+      text-decoration: none;
+      font-size: 1.2rem !important;
+      font-weight: 700 !important;
+      color: $black;
+      .logo {
+        display: flex;
+        align-items: center;
+        .logo-name {
+          font-size: inherit;
+          font-weight: inherit;
+          margin: 0;
+          span {
+            font-weight: 100;
+            color: $gray;
+          }
+        }
+      }
+    }
   }
 
   .menu-container {
@@ -48,23 +67,25 @@ nav {
 
 .mobile-menu {
   position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: $black;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $black;
+  flex-wrap: nowrap;
+  // justify-content: space-between;
+  justify-content: space-around;
+  // justify-content: space-evenly;
 
   button {
     align-self: flex-end;
     // margin: 35px 45px 0 0;
     outline: none;
     border: none;
-    background-color: transparent;
+    background-color: transparent !important;
     text-transform: uppercase;
     font-family: inherit;
     color: white;
@@ -108,20 +129,24 @@ nav {
     justify-content: space-between;
     align-items: space-evenly;
     color: $primary;
-    h6 {
+    a {
       font-weight: normal;
       letter-spacing: 1px;
-      color: $primary;
-
+      color: $gray;
+      padding: 0.5rem;
       &:first-of-type {
-        color: $primary;
+        color: $gray;
       }
     }
+
     @media screen and (min-width: 810px) and (max-width: 1439px) {
     }
+
     @media screen and (max-width: 811px) {
       flex-direction: column;
       align-items: center;
+      margin-bottom: 4rem;
+      margin-top: 1rem;
     }
   }
 }

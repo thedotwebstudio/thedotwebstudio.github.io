@@ -25,7 +25,7 @@ const MOBILE_NAV_ITEMS = [
 ];
 
 export function Menu({ isOpen, toggle, ulVariant, liVariant }) {
-  console.log("setMobileNavOpen", toggle);
+  // console.log("setMobileNavOpen", toggle);
   return (
     <motion.ul variants={ulVariant}>
       {MOBILE_NAV_ITEMS.map((navItem) => (

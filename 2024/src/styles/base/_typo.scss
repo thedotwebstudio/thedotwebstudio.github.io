@@ -66,6 +66,16 @@ h6 {
 
 //BUTTON
 button {
+  display: inline-block;
+  // padding: 20px 40px;
+  // margin-right: 50px;
+  border: 1px solid black;
+  background: linear-gradient(to left, $white 50%, $primary 50%);
+  background-size: 200% 100%;
+  cursor: pointer;
+  transition: all ease 0.5s;
+}
+button {
   padding: 1rem 2rem;
   padding: 20px 40px;
   // background: $primary;
@@ -74,21 +84,70 @@ button {
   border: 0px;
   border-radius: 0.5rem;
   color: $black;
-  background: transparent;
+  // background: transparent;
   font-size: 12px;
   letter-spacing: 1.5px;
   font-weight: 500;
   text-transform: uppercase;
-  &.primary {
-    background: $primary;
-    color: $white;
+  .anin{
+    
   }
-  &.secondary {
-    background: $white;
-    color: $primary;
-    font-weight: 500;
-    border: 1px solid $primary;
+  // &.primary {
+  //   background: $primary;
+  //   color: $white;
+  // }
+  // &.secondary {
+  //   background: $white;
+  //   color: $primary;
+  //   font-weight: 500;
+  //   border: 1px solid $primary;
+  // }
+  // &.outline {
+  // }
+  &.transperant {
+  padding: 20px;
+    background: transparent;
   }
-  &.outline {
-   }
+}
+
+
+.btn-l-r {
+  background-position: right top;
+  &:hover {
+    background-position: left top;
+    color: white;
+  }
+}
+
+.btn-r-l {
+  background: linear-gradient(to right, #ffffff 50%, $primary 50%);
+  background-size: 200% 100%;
+  background-position: left bottom;
+
+  &:hover {
+    background-position: right top;
+    color: white;
+  }
+}
+
+.btn-t-b {
+  background: linear-gradient(to bottom, $primary 50%, $white 50%);
+  background-size: 100% 200%;
+  background-position: left bottom;
+
+  &:hover {
+    background-position: right top;
+    color: white;
+  }
+}
+
+.btn-b-t {
+  background: linear-gradient(to bottom, $white 50%, $primary 50%);
+  background-size: 100% 200%;
+  background-position: left top;
+
+  &:hover {
+    background-position: right bottom;
+    color: white;
+  }
 }

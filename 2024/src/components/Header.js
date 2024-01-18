@@ -2,6 +2,7 @@ import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAnimate, stagger, motion } from "framer-motion";
 import LOGO_PNG from "../svg/logo.png";
+import BURGER_SVG from "../svg/burger.svg";
 import { MenuToggle } from "./Header/MenuToggle";
 import { Menu } from "./Header/Menu";
 // import LOGO_SVG from "../svg/logo.svg";
@@ -10,13 +11,42 @@ const staggerMenuItems = stagger(0.1, { startDelay: 0.15 });
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  //WINDOW SIZE
+  const windowSize = useRef([window.innerWidth, window.innerHeight]);
+  console.log("windowSize", windowSize.current[0]);
 
   const handleShowNavbar = () => {
     // setIsOpen(!isOpen);
   };
-  useEffect(() => {}, []);
+  useEffect(() => {
+    if (windowSize.current[0] <= 810) {
+      setHeaderOver(!headerOver);
+    }
+  }, []);
   ///////////////////////////////////////////////
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [headerOver, setHeaderOver] = useState(false);
+
+  const showLogoNameVariant = {
+    showName: {
+      opacity: 1,
+      transition: {
+        y: "-50%",
+        delay: 0.15,
+        duration: 0.5,
+        ease: [0.74, 0, 0.19, 1.02],
+      },
+    },
+    hideName: {
+      opacity: 0,
+      y: "10%",
+      transition: {
+        delay: 0.35,
+        duration: 0.5,
+        ease: [0.74, 0, 0.19, 1.02],
+      },
+    },
+  };
 
   const hideNavItemsVariant = {
     opened: {
@@ -104,9 +134,13 @@ function Header() {
   const fadeInStart = { opacity: 0 };
   const fadeInEnd = { opacity: 1 };
   const fadeInTransition = { duration: 1 };
+
   ///////////////////////////////////////////////
   return (
-    <header className="header-wrapper">
+    <motion.header
+      className="header-wrapper"
+      onHoverStart={() => setHeaderOver(!headerOver)}
+      onHoverEnd={() => setHeaderOver(!headerOver)}>
       <div className="container">
         <motion.nav
           initial="closed"
@@ -114,19 +148,30 @@ function Header() {
           <motion.div className="logo-container" variants={hideNavItemsVariant}>
             {/* <motion.h1 variants={hideNavItemsVariant}> */}
             <Link to="/">
-              <img src={LOGO_PNG} alt="" />
+              <motion.span
+                className="logo"
+                animate={headerOver ? "showName" : "hideName"}>
+                <img src={LOGO_PNG} alt="" />
+                <motion.span
+                  className="logo-name"
+                  variants={showLogoNameVariant}>
+                  The Dot <span>web studio</span>
+                </motion.span>
+              </motion.span>
             </Link>
             {/* </motion.h1> */}
           </motion.div>
           <div className="menu-container">
             <motion.button
+              className="transperant"
               variants={hideNavItemsVariant}
               onClick={() => setMobileNavOpen(true)}>
-              +
+              <img src={BURGER_SVG} alt="" height="12" />
             </motion.button>
           </div>
           <motion.div variants={mobileMenuVariant} className="mobile-menu">
             <motion.button
+              className="transperant"
               variants={fadeInVariant}
               onClick={() => setMobileNavOpen(false)}>
               Close
@@ -146,66 +191,15 @@ function Header() {
               liVariant={liVariant}
             />
             <motion.div variants={fadeInVariant} className="contact">
-              <h6>+91 98216 72735</h6>
-              <h6>thedotwebstudio@gmail.com</h6>
+              <a href="tel:+919821672735">+91 98216 72735</a>
+              <a href="mailto:thedotwebstudio@gmail.com">
+                thedotwebstudio@gmail.com
+              </a>
             </motion.div>
           </motion.div>
         </motion.nav>
-
-        {/* <div className="brand">
-          <Link to="/">
-            <img src={LOGO_PNG} alt="" height={60} />
-          </Link>
-          <MenuToggle
-            toggle={() => {
-              setIsOpen(!isOpen);
-            }}
-          /> */}
-
-        {/* <div className="burger" onClick={handleShowNavbar}>
-            <motion.button
-              whileTap={{ scale: 0.97 }}
-              onClick={() => setIsOpen(!isOpen)}>
-              <div className="arrow" style={{ transformOrigin: "50% 55%" }}>
-                <svg width="15" height="15" viewBox="0 0 20 20">
-                  <path d="M0 7 L 20 7 L 10 16" />
-                </svg>
-              </div>
-            </motion.button>
-             <button>MENU</button>
-          </div> */}
-        {/* </div> */}
-        {/* <Menu
-          isOpen={isOpen}
-          toggle={() => {
-            setIsOpen(!isOpen);
-          }}
-        /> */}
-
-        {/* <nav className={`${isOpen && "open"}`}>
-          <ul style={{}}>
-            <li
-              onClick={() => {
-                setIsOpen(false);
-              }}>
-              <Link to="/work">Work</Link>
-            </li>
-            <li
-              onClick={() => {
-                setIsOpen(false);
-              }}>
-              <Link to="/studio">Studio</Link>
-            </li>
-            <li
-              onClick={() => {
-                setIsOpen(false);
-              }}>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
-        </nav> */}
       </div>
-    </header>
+    </motion.header>
   );
 }
 

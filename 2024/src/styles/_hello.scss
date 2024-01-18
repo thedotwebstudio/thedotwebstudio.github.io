@@ -1,11 +1,12 @@
 .hello-section {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     align-content:  center;
     justify-content: center;
     align-items: center;
-    // padding: 2rem 1rem;
+    margin: 0rem -2rem;
     background: $primary;
     color: $white;
 }
