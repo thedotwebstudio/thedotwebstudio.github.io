@@ -7,7 +7,7 @@ const HeroBanner = () => {
     target: ref,
     offset: ["end end ", "end start"],
   });
-
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
     damping: 30,
@@ -22,7 +22,7 @@ const HeroBanner = () => {
     <motion.section
       ref={ref}
       className="hero-banner"
-      style={{ backgroundPosition: scrollYProgress }}>
+      style={{ backgroundPosition: backgroundY }}>
       <motion.h1
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -49,9 +49,7 @@ const HeroBanner = () => {
       <motion.div className="progress-bar" style={{ scaleX }} />
 
       <div className="cta">
-        <button className="secondary outline btn-t-b ">
-          DISCOVER OUR WORK
-        </button>
+        <button className=" ">DISCOVER OUR WORK</button>
       </div>
     </motion.section>
   );

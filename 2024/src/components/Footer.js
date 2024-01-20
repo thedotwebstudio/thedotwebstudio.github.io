@@ -1,37 +1,41 @@
+import { Menu } from "./Header/Menu";
+
 function Footer() {
   return (
-       <footer className="footer-wrapper">
-        <div className="bg-animation">
-          <div className="anim-cir"></div>
-          <div className="anim-cir2"></div>
+    <footer className="footer-wrapper">
+      <div className="bg-animation">
+        <div className="anim-cir"></div>
+        <div className="anim-cir2"></div>
+      </div>
+      <div className="top">
+        <div className="footer-navigation">
+          <Menu />
         </div>
-        <div className="top">
-          <div className="footer-navigation">
-            <ul>
-              <li>Work</li>
-              <li>Studio</li>
-              <li>Contact</li>
-            </ul>
-          </div>
-          <div className="subscribe">
+        <div className="subscribe">
+          <h6>
             Get industry insights and creative inspiration straight to your
             inbox.
-          </div>
+          </h6>
+          <form action="">
+            <input type="email" placeholder="johndoe@xyz.com" />
+            <input type="submit"  value="send" />
+          </form>
         </div>
-        <div className="logo">TheDot. web studio</div>
-        <div className="bottom">
-          <div className="addr">Mumbai, INDIA.</div>
-          <div className="social">
-            <ul>
-              <li>FB</li>
-              <li>X</li>
-              <li>INSTA</li>
-            </ul>
-          </div>
-          <div className="copy-w">Copyright © mksh Studio</div>
+      </div>
+      <div className="logo">TheDot.</div>
+      <div className="bottom">
+        <small className="addr">Mumbai, INDIA.</small>
+        <div className="social">
+          <ul>
+            <li>FB</li>
+            <li>X</li>
+            <li>INSTA</li>
+          </ul>
         </div>
-      </footer>
-   );
+        <small className="copy-w">Copyright © TheDot</small>
+      </div>
+    </footer>
+  );
 }
 
 export default Footer;

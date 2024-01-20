@@ -23,7 +23,7 @@ export default function AnimatedWord({ value }) {
   return (
     <>
       <motion.div className="progress-bar" style={{ scaleX }} />
-      <h3 className="anim-word" ref={ref}>
+      <h2 className="anim-word" ref={ref}>
         {words.map((word, i) => {
           const start = i / words.length;
           const end = start + 1 / words.length;
@@ -33,7 +33,7 @@ export default function AnimatedWord({ value }) {
             </SingleWord>
           );
         })}
-      </h3>
+      </h2>
     </>
   );
 }

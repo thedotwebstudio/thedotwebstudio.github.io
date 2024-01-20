@@ -8,7 +8,7 @@ const ServiceProcess = (props) => {
 
   return (
     <motion.section className="service-process">
-      <h6 className="text-gradiant">Our steps</h6>
+      <h6 className="text-gradiant">Our process</h6>
       <div className="main-section">
         <h3>How does a project at TheDot work?</h3>
         {/* <div className="left-sec"> </div> */}

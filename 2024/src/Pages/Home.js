@@ -8,15 +8,21 @@ import HorizontalScroll from "../components/HorizontalScroll";
 
 function Home() {
   return (
-      <motion.div className="page-wrapper">
-        <HeroBanner />
-        <HorizontalScroll/>
-        <Achivment />
-        <Marquee />
-        <Experties />
-        <SayHello />
-      </motion.div>
-   );
+    <motion.div className="page-wrapper">
+      {/* <div>
+        <div className="bg-animation">
+          <div className="anim-cir"></div>
+          <div className="anim-cir2"></div>
+        </div>
+      </div> */}
+      <HeroBanner />
+      <Achivment />
+      <HorizontalScroll />
+      {/* <Marquee /> */}
+      <Experties />
+      <SayHello />
+    </motion.div>
+  );
 }
 
 export default Home;

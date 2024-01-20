@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import ServiceHeader from "../components/Services/ServiceHeader";
 import ServiceApproach from "../components/Services/ServiceApproach";
 import SayHello from "../components/SayHello";
-import ServiceSteps from "../components/Services/ServiceSteps";
+import ServiceProcess from "../components/Services/ServiceProcess";
 import ServiceCaseStudies from "../components/Services/ServiceCaseStudies";
 
 function Websites() {
@@ -12,7 +12,7 @@ function Websites() {
 
       <ServiceApproach />
 
-      <ServiceSteps />
+      <ServiceProcess />
 
       <ServiceCaseStudies />
       

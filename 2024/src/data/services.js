@@ -4,6 +4,8 @@ export const ServicesData = [
     name: "Website",
     slug: "website",
     fullname: "Website creation on measure",
+    tagline:
+      "Seeing is believing - and we see a bright future in front of you.",
     short_dis:
       "Custom Wordpress website design, landing page, E-Commerce, hosting,SEO, etc.",
     icon: "",
@@ -70,6 +72,8 @@ export const ServicesData = [
     name: "Web application",
     slug: "web-application",
     fullname: "Development Web application",
+    tagline: "From web scratch.",
+
     short_dis:
       "Design of tailor-made web applications, automation, API connection, intranet, etc.",
     icon: "",
@@ -150,6 +154,8 @@ export const ServicesData = [
     name: "Design & Branding",
     slug: "design-branding",
     fullname: "Design & Branding",
+    tagline: "Your true self - by us",
+
     short_dis:
       "Creation of a unique visual identity and variation in business cards, leaflets, promotional articles, banners, etc.",
     icon: "",
@@ -209,9 +215,10 @@ export const ServicesData = [
   },
   {
     id: 0,
-    name: "Social networks",
+    name: "Social Media",
     slug: "social-networks",
     fullname: "Network management social",
+    tagline: "Get in touch with your audience.",
     short_dis:
       "Management of your social networks and content creation: text, photos, videos, advertising campaigns, etc.",
     icon: "",

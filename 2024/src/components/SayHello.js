@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const SayHello = () => {
   return (
     <motion.section className="hello-section">
-      <h1> HELLO </h1>
+      <h1> Say HELLO! </h1>
     </motion.section>
   );
 };

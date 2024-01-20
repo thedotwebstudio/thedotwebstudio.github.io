@@ -23,7 +23,7 @@ function Header() {
       setHeaderOver(!headerOver);
     }
   }, []);
-  ///////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////////////
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const [headerOver, setHeaderOver] = useState(false);
 
@@ -135,7 +135,7 @@ function Header() {
   const fadeInEnd = { opacity: 1 };
   const fadeInTransition = { duration: 1 };
 
-  ///////////////////////////////////////////////
+  //////////////////////////////////////////////////////////////////////////////////////
   return (
     <motion.header
       className="header-wrapper"
@@ -155,7 +155,7 @@ function Header() {
                 <motion.span
                   className="logo-name"
                   variants={showLogoNameVariant}>
-                  The Dot <span>web studio</span>
+                  TheDot. <span>web studio</span>
                 </motion.span>
               </motion.span>
             </Link>

@@ -12,7 +12,8 @@ const ServiceHeader = (props) => {
             {/* <img src={ICON} alt="" /> */}
           </div>
           <div className="name">
-            <h1>{service.fullname}</h1>
+            <h1>{service.name}</h1>
+            <p>{service.tagline}</p>
           </div>
         </>
       )}

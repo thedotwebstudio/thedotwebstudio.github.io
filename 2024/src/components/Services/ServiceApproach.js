@@ -9,10 +9,10 @@ const ServiceApproach = (props) => {
     <motion.section className="service-approach">
       {approach && (
         <>
-          <h4>Our approach</h4>
+          <h6 className="text-gradiant">Our approach</h6>
           <div className="main-section">
             <div className="left-sec">
-              <div className="title">{approach.title}</div>
+              <h2 className="title">{approach.title}</h2>
               <div className="approach">
                 <p>{approach.description}</p>
               </div>
@@ -20,11 +20,12 @@ const ServiceApproach = (props) => {
             <div className="right-sec">
               <ul>
                 {/* 👇️ render array of objects */}
-                {approach.list.map((obj,i) => {
+                {approach.list.map((obj, i) => {
                   return (
-                    <div key={obj.id}>
-                       
-                      <li><span>{i+1}.</span> {obj}</li>
+                    <div key={i}>
+                      <li>
+                        <span>{i + 1}.</span> {obj}
+                      </li>
                     </div>
                   );
                 })}

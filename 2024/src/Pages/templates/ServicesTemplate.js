@@ -4,11 +4,12 @@ import { useSearchParams, useLocation } from "react-router-dom";
 
 import ServiceHeader from "./../../components/Services/ServiceHeader";
 import ServiceApproach from "./../../components/Services/ServiceApproach";
-import ServiceSteps from "./../../components/Services/ServiceSteps";
+import ServiceProcess from "./../../components/Services/ServiceProcess";
 import ServiceCaseStudies from "./../../components/Services/ServiceCaseStudies";
 import SayHello from "./../../components/SayHello";
 //DATA
 import { ServicesData } from "../../data/services.js";
+import ProjectsList from "../../components/ProjectsList.js";
 
 function ServicesTemplate() {
   const location = useLocation();
@@ -38,13 +39,20 @@ function ServicesTemplate() {
 
   return (
     <div className="container">
+      <div className="bg-animation">
+        <div className="anim-cir"></div>
+        <div className="anim-cir2"></div>
+      </div>
+
       <ServiceHeader data={filtered} />
 
       <ServiceApproach data={filtered} />
 
-      <ServiceSteps data={filtered} />
+      <ServiceProcess data={filtered} />
 
       <ServiceCaseStudies data={filtered} />
+
+      <ProjectsList />
 
       <SayHello />
     </div>

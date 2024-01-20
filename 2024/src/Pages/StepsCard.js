@@ -15,7 +15,7 @@ function StepsCard(props) {
               return (
                 <li key={i}>
                   <div to="service/website" className="card">
-                    <p>{i+1}</p>
+                    {/* <p>#{i+1}</p> */}
                     <div className="title">{obj.name}</div>
                     <p>{obj.description}</p>
                   </div>
