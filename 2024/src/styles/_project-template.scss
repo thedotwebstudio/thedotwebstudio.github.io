@@ -1,0 +1,23 @@
+.project-template {
+  .project-header {
+    .name {
+      h1 {
+        margin-bottom: 0px;
+      }
+      ul {
+        &.services {
+          display: flex;
+          li {
+            font-size: 0.75rem;
+            padding: 0.5rem 1rem;
+            background: $white;
+            border: 1px solid $gray;
+            border-radius: 0.5rem;
+            margin-right: 0.5rem;
+          }
+        }
+      }
+      margin-bottom: 2rem;
+    }
+  }
+}

@@ -19,8 +19,7 @@ function ServicesTemplate() {
   //Local State
   const [data, setData] = useState(ServicesData);
   const [urlParam, setUrlParam] = useState("");
-  const [service, setService] = useState(null);
-  console.log("DATA", data);
+  //  console.log("DATA", data);
 
   // ✅ Find the first object that matches a condition
   const found = data.find((obj) => {
@@ -28,7 +27,7 @@ function ServicesTemplate() {
   });
 
   // 👇️ {id: 1, country: 'Austria'}
-  console.log(found);
+  // console.log(found);
 
   // ✅ Find multiple objects that satisfy a condition
   const filtered = data.filter((obj) => {

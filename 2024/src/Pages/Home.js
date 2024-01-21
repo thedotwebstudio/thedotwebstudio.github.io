@@ -5,6 +5,7 @@ import Experties from "../components/Expertise";
 import SayHello from "../components/SayHello";
 import { motion } from "framer-motion";
 import HorizontalScroll from "../components/HorizontalScroll";
+import ProjectsCard from "./ProjectCard";
 
 function Home() {
   return (
@@ -20,6 +21,7 @@ function Home() {
       <HorizontalScroll />
       {/* <Marquee /> */}
       <Experties />
+      <ProjectsCard />
       <SayHello />
     </motion.div>
   );

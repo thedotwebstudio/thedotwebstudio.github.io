@@ -106,3 +106,8 @@ section {
     }
   }
 }
+.black-text-gradient {
+  background: linear-gradient(316deg, #414345 27%, #0f0f11 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

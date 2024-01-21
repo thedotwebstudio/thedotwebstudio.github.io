@@ -1,4 +1,4 @@
-import { Outlet } from "react-router-dom";
+import { Outlet, ScrollRestoration } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 
@@ -9,6 +9,7 @@ function Layout() {
             share across all the pages on your site, like navigation. */}
       <Header />
         <main className="main-wrapper">
+
           <Outlet />
         </main>
        {/* An <Outlet> renders whatever child route is currently active,

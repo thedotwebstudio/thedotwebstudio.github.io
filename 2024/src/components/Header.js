@@ -13,7 +13,7 @@ function Header() {
   const [isOpen, setIsOpen] = useState(false);
   //WINDOW SIZE
   const windowSize = useRef([window.innerWidth, window.innerHeight]);
-  console.log("windowSize", windowSize.current[0]);
+  // console.log("windowSize", windowSize.current[0]);
 
   const handleShowNavbar = () => {
     // setIsOpen(!isOpen);

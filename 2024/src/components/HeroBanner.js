@@ -15,7 +15,7 @@ const HeroBanner = () => {
   });
 
   useEffect(() => {
-    scrollYProgress.on("change", (e) => console.log(scaleX.current));
+    // scrollYProgress.on("change", (e) => console.log(scaleX.current));
   }, []);
 
   return (
