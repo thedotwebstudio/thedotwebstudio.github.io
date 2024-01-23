@@ -1,18 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import ICON from "../..//images/projects/blackant/card-designs.jpg";
+import ARROW_SVG from "../../svg/arrow-up-right.svg";
+
 const ProjectHeader = (props) => {
   console.log("PROJECTS PROPS", props.data);
   const [project, setProject] = useState(props.data[0]);
-  const images = require.context("../../images", true);
-  const imageList = images.keys().map((image) => images(image));
-  console.log("imageList",);
-
   return (
     <>
       {project && (
         <motion.section className="project-header">
-          <div className="name">
+          {/* <div className="name">
             <h1 style={{ color: project.brand_color[0] }}>{project.name}</h1>
             <p>{project.logo}</p>
             <ul className="services">
@@ -20,27 +17,71 @@ const ProjectHeader = (props) => {
                 <li key={i}>{item} &nbsp;</li>
               ))}
             </ul>
-          </div>
-
-          <div style={{ backgroundImage: ICON }}>
-            {/* {imageList.map((image, index) => (
-              <img key={index} src={image.default} alt={`image-${index}`} />
-            ))} */}
-            {/* <img src="../../images/projects/blackant/card-designs.jpg" alt="" /> */}
-            {/* <img src={ICON} /> */}
-            { console.log(project.images.img01)}
-            <img alt="xxx" src={project.images.img01} />
-          </div>
-          <div>
-            <p>{project.fullname}</p>
-            <p>{project.short_dis}</p>
-            <ul>
-              <li>
-                {project.brand_color.map((item, i) => (
-                  <span key={i}>{item} &nbsp;</span>
+          </div> */}
+          {/* ///////////////////////////////////////////////*/}
+          <div className="project-details hv-space">
+            <div className="left">
+              <h2>{project.name}</h2>
+              <p>{project.short_dis}</p>
+              <br />
+              <ul className="services">
+                {project.services.map((item, i) => (
+                  <li key={i}>{item} &nbsp;</li>
                 ))}
-              </li>
+              </ul>
+              <img src={ARROW_SVG} alt="" height={36} />
+            </div>
+            <div className="right">
+              <img alt="browser" src={project.images.browser} width="100%" />
+            </div>
+          </div>
+          <div className="hv-space">
+            <img
+              src={project.images.designs}
+              alt={project.images.designs}
+              width="100%"
+            />
+          </div>
+          <div className="brand-details hv-space">
+            <h1>Brand/Client details</h1>
+            <ul className="colorguide">
+              {project.brand_color.map((item) => (
+                <li key={item} style={{ background: item }}>
+                  {item}
+                </li>
+              ))}
+              <li style={{ background: "#000" }}>#000000</li>
+              <li style={{ background: "#fff" }}>#FFFFFF</li>
             </ul>
+          </div>
+          <div className="website-imgs hv-space">
+            <div>
+              <img src={project.images.website} alt={project.images.website} />
+            </div>
+            <div>
+              <img
+                src={project.images.website2}
+                alt={project.images.website2}
+              />
+            </div>
+          </div>
+          <div className="gallery hv-space">
+            <h1>Gallery</h1>
+            <div style={{ background: project.brand_color[0] }}>
+              <img
+                alt={project.images.laptop}
+                src={project.images.laptop}
+                width="100%"
+              />
+            </div>
+          </div>
+          {console.log(
+            "project.social_media_posts",
+            project.social_media_posts
+          )}
+
+          <div className="social hv-space">
+            <h1>Social media posts</h1>
           </div>
         </motion.section>
       )}

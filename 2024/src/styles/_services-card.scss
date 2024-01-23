@@ -10,8 +10,8 @@
       width: 33.3333333333%;
       width: 50%;
       padding: 16px;
-
       a.card {
+        position: relative;
         width: 100%;
         display: block;
         height: 100%;
@@ -21,9 +21,64 @@
         width: 100%;
         text-decoration: none;
         color: black;
-        border: 1px solid $primary;
+        // border: 1px solid $primary;
         border-radius: 16px;
-
+        background: $white;
+        overflow: visible;
+        transition: box-shadow 1s;
+        transition: all 1s;
+        &::before {
+          content: "";
+          position: absolute;
+          inset: -5px;
+          z-index: -1;
+          transition: all 1s;
+          transform: translate(0px, 0px);
+          filter: blur(10px);
+          background: conic-gradient(
+            from 90deg at 0% 0%,
+            #ffd700,
+            #f79d03,
+            #ee6907,
+            #e6390a,
+            #de0d0d,
+            #d61039,
+            #cf1261,
+            #d61039,
+            #de0d0d,
+            #ee6907,
+            #f79d03,
+            #ffd700,
+            #ffd700,
+            #ffd700
+          );
+          opacity: 0;
+        }
+        &:hover {
+          &::before {
+            opacity: 1;
+            transition: all 1s;
+            transform: translate(5px, 8px);
+            background: conic-gradient(
+              from 90deg at 40% -25%,
+              #ffd700,
+              #f79d03,
+              #ee6907,
+              #e6390a,
+              #de0d0d,
+              #d61039,
+              #cf1261,
+              #d61039,
+              #de0d0d,
+              #ee6907,
+              #f79d03,
+              #ffd700,
+              #ffd700,
+              #ffd700
+            );
+            filter: blur(10px);
+          }
+        }
         .title {
           // font-size: 3rem;
           // font-weight: 700;
@@ -44,8 +99,8 @@
             }
           }
         }
-      } 
-    } 
+      }
+    }
   }
   @media screen and (min-width: 810px) and (max-width: 1439px) {
   }

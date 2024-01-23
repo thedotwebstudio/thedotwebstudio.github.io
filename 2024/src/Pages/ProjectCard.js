@@ -19,15 +19,16 @@ function ProjectsCard() {
         to={`work/${item.slug}`}
         className="card"
         style={{ background: item.brand_color[0] }}>
-        <h5 className="title">{item.name}</h5>
+        {item.logo_url && <img src={item.logo_url} alt="" height={36} />}
+        <h6 className="title">{item.name}</h6>
         <p>{item.short_dis} </p>
-        <span>
+        <p>
           <img src={ARROW_SVG} alt="" height={36} />
-        </span>
+        </p>
         <div className="services">
           <ul>
             <li>
-              {item.services.map((item,i) => (
+              {item.services.map((item, i) => (
                 <span key={i}>{item} &nbsp;</span>
               ))}
             </li>
@@ -42,5 +43,4 @@ function ProjectsCard() {
     </nav>
   );
 }
-
 export default ProjectsCard;

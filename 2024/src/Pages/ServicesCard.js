@@ -15,7 +15,7 @@ function ServicesCard() {
         ease: [0.25, 0.25, 0, 1],
         delay: 3,
       }}>
-      <Link to={item.slug} className="card">
+      <Link to={item.slug} className="card shadow">
         <h5 className="title">{item.name}</h5>
         <p>{item.short_dis} </p>
         <span>

@@ -2,6 +2,7 @@ import { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAnimate, stagger, motion } from "framer-motion";
 import LOGO_PNG from "../svg/logo.png";
+import LOGO_SVG from "../svg/logo.svg";
 import BURGER_SVG from "../svg/burger.svg";
 import { MenuToggle } from "./Header/MenuToggle";
 import { Menu } from "./Header/Menu";
@@ -151,10 +152,10 @@ function Header() {
               <motion.span
                 className="logo"
                 animate={headerOver ? "showName" : "hideName"}>
-                <img src={LOGO_PNG} alt="" />
+                <img src={LOGO_SVG} alt="" />
                 <motion.span
                   className="logo-name"
-                  variants={showLogoNameVariant}>
+                  variants={showLogoNameVariant}>&nbsp;
                   TheDot. <span>web studio</span>
                 </motion.span>
               </motion.span>
