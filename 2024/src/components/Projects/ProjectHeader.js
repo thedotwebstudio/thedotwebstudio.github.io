@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import ARROW_SVG from "../../svg/arrow-up-right.svg";
+import { Link } from "react-router-dom";
 
 const ProjectHeader = (props) => {
   console.log("PROJECTS PROPS", props.data);
@@ -29,21 +30,28 @@ const ProjectHeader = (props) => {
                   <li key={i}>{item} &nbsp;</li>
                 ))}
               </ul>
-              <img src={ARROW_SVG} alt="" height={36} />
+              <Link className="btn-link" to="https://starstake.com/" target="_blank">
+                View <img src={ARROW_SVG} alt="" height={24} />
+              </Link>
+              {/* <img src={ARROW_SVG} alt="" height={36} /> */}
             </div>
-            <div className="right">
+            {/* <div className="right">
               <img alt="browser" src={project.images.browser} width="100%" />
+            </div> */}
+          </div>
+          {/* IF DESIGN IMG IS IN THE OBJ  */}
+          {project.images.design !== "" && (
+            <div className="hv-space">
+              <img
+                src={project.images.designs}
+                alt={project.images.designs}
+                width="100%"
+              />
             </div>
-          </div>
-          <div className="hv-space">
-            <img
-              src={project.images.designs}
-              alt={project.images.designs}
-              width="100%"
-            />
-          </div>
+          )}
+
           <div className="brand-details hv-space">
-            <h1>Brand/Client details</h1>
+            <h2>Brand/Client details</h2>
             <ul className="colorguide">
               {project.brand_color.map((item) => (
                 <li key={item} style={{ background: item }}>
@@ -66,23 +74,69 @@ const ProjectHeader = (props) => {
             </div>
           </div>
           <div className="gallery hv-space">
-            <h1>Gallery</h1>
-            <div style={{ background: project.brand_color[0] }}>
+            <h2>Gallery</h2>
+            {/* <div style={{ background: project.brand_color[0] }}> */}
+            {/* <div className="gallery-container">
+              <img
+                alt={project.images.desktop}
+                src={project.images.desktop}
+                width="100%"
+              />
               <img
                 alt={project.images.laptop}
                 src={project.images.laptop}
                 width="100%"
               />
+              <img
+                alt={project.images.tab}
+                src={project.images.tab}
+                width="100%"
+              />
+              <img
+                alt={project.images.mobile}
+                src={project.images.mobile}
+                width="100%"
+              />
+              <img
+                alt={project.images.iphone}
+                src={project.images.iphone}
+                width="100%"
+              />
+            </div> */}
+            <div>
+              <img
+                alt={project.images.desktop}
+                src={project.images.desktop}
+                width="100%"
+              />
+              <img
+                alt={project.images.laptop}
+                src={project.images.laptop}
+                width="100%"
+              />
+              <img
+                alt={project.images.tab}
+                src={project.images.tab}
+                width="100%"
+              />
+              <img
+                alt={project.images.mobile}
+                src={project.images.mobile}
+                width="100%"
+              />
             </div>
           </div>
-          {console.log(
+          {/* Object.keys(myarray[0]).length === 0; */}
+          {/* {console.log(
             "project.social_media_posts",
-            project.social_media_posts
+            Object.keys(project.social_media_posts).length !== 0
+          )} */}
+          {/* IF SOCIAL MEDIA POST IMG IS N THE OBJ  */}
+          {Object.keys(project.social_media_posts).length !== 0 && (
+            <div className="social hv-space">
+              <h1>Social media posts</h1>
+            </div>
           )}
-
-          <div className="social hv-space">
-            <h1>Social media posts</h1>
-          </div>
         </motion.section>
       )}
     </>

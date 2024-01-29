@@ -1,9 +1,11 @@
 .project-template {
+  .bg-animation {
+    position: relative;
+  }
   .hv-space {
     padding-bottom: 4rem;
     padding-top: 2rem;
-    border-bottom: 1px solid $gray;
-
+    // border-bottom: 1px solid $gray;
   }
   .project-header {
     .name {
@@ -67,16 +69,58 @@
       div {
         flex: 1;
         width: 100%;
+        padding: 2rem;
         img {
           width: 100%;
         }
       }
     }
     .gallery {
-      min-height: 100vh;
+      min-height: 50vh;
+      .gallery-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        img {
+          width: auto;
+          height: 500px;
+        }
+      }
     }
     .social {
       min-height: 100vh;
+    }
+    @media screen and (min-width: 810px) and (max-width: 1439px) {
+    }
+
+    @media screen and (max-width: 811px) {
+      h2{
+        font-size: 3rem;
+      }
+      .brand-details {
+        .colorguide {
+          li {
+            padding: 1rem 2rem;
+          }
+        }
+      }
+      .website-imgs {
+        flex-direction: column;
+        div {
+          padding: 0px;
+          padding-bottom: 2rem;
+          img {
+          }
+        }
+      }
+      .gallery {
+        .gallery-container {
+          img {
+            height: 100vw;
+          }
+        }
+      }
     }
   }
 }

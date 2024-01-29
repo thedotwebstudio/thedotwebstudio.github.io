@@ -1,10 +1,30 @@
- 
+import SayHello from "../components/SayHello";
+import { motion } from "framer-motion";
+import ProjectsCard from "../components/Projects/ProjectCard";
+import PageTransition from "../components/pageTransition";
+import { useEffect } from "react";
+
 function Work() {
   return (
-    <div className="container">
-      <h1>WORK</h1>
-    </div>
+    <motion.div className="projects-section">
+      <div className="container">
+        <div className="projects-banner">
+          <h1>We choose a different {"->"} starting point</h1>
+          <p>
+            Each project is an opportunity to innovate. To view challenges
+            through a new lens. To venture into uncharted territory for the
+            first time.
+          </p>
+        </div>
+        <ProjectsCard cardLength={3} />
+        <SayHello />
+        <SayHello />
+        <SayHello />
+        <SayHello />
+      </div>
+    </motion.div>
   );
 }
 
+// export default PageTransition(Work);
 export default Work;

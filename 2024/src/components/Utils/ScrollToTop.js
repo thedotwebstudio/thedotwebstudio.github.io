@@ -7,7 +7,7 @@ export const withRouter = (Component) => {
   const Wrapper = (props) => {
     const location = useLocation();
     const [count, setCount] = useState(0);
-  
+
     useEffect(() => {
       // execute on location change
       setCount(count + 1);
@@ -18,7 +18,9 @@ export const withRouter = (Component) => {
       // return () => {
       //   unlisten();
       // };
-    }, [location]);    const history = useNavigate();
+    }, [location]);
+    
+    const history = useNavigate();
     return <Component history={history} {...props} />;
   };
   return Wrapper;

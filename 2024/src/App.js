@@ -9,9 +9,10 @@ import Work from "./Pages/Work";
 import Studio from "./Pages/Studio";
 import Home from "./Pages/Home";
 import NoMatch from "./Pages/NoMatch";
-import Websites from "./Pages/Websites";
 import ServicesTemplate from "./Pages/templates/ServicesTemplate";
 import ProjectTemplate from "./Pages/templates/ProjectTemplate";
+import Services from "./Pages/Services";
+
 function useScrollToTop() {
   const { pathname } = useLocation();
 
@@ -23,7 +24,7 @@ function useScrollToTop() {
 function App() {
   // on router change scroll top
   useScrollToTop();
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     loading
@@ -32,12 +33,8 @@ function App() {
   }, [loading]);
 
   return (
-    <AnimatePresence>
-      {loading ? (
-        <motion.div key="loader" className="loading-container">
-          <Loader setLoading={setLoading} />
-        </motion.div>
-      ) : (
+    <>
+      <AnimatePresence mode="wait">
         <Routes>
           {/* Routes nest inside one another. Nested route paths build upon
       parent route paths, and nested route elements render inside
@@ -45,8 +42,9 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="studio" element={<Studio />} />
-            <Route path="work" element={<Work />} />
-            <Route path="work/:id" element={<ProjectTemplate />} />
+            <Route path="projects" element={<Work />} />
+            <Route path="services" element={<Services />} />
+            <Route path="projects/:id" element={<ProjectTemplate />} />
             <Route path="website" element={<ServicesTemplate />} />
             <Route path="web-application" element={<ServicesTemplate />} />
             <Route path="design-branding" element={<ServicesTemplate />} />
@@ -57,8 +55,14 @@ function App() {
             <Route path="*" element={<NoMatch />} />
           </Route>
         </Routes>
-      )}
-    </AnimatePresence>
+        {/* {loading ? (
+        <motion.div key="loader" className="loading-container">
+          <Loader setLoading={setLoading} />
+        </motion.div>
+      ) : (
+      )} */}
+      </AnimatePresence>
+    </>
   );
 }
 

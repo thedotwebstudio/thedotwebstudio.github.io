@@ -7,7 +7,7 @@ import ServiceCaseStudies from "../components/Services/ServiceCaseStudies";
 
 function Websites() {
   return (
-    <motion.div className="page-wrapper">
+    <motion.div className="">
       <ServiceHeader />
 
       <ServiceApproach />

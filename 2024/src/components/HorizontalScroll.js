@@ -74,7 +74,7 @@ function ParallaxText({ children, baseVelocity = 100 }) {
 
 export default function HorizontalScroll() {
   return (
-    <section>
+    <section style={{marginLeft:"-3rem", marginRight:"-3rem"}}>
       <ParallaxText baseVelocity={-5}>
         <span></span>Website<span></span>Branding<span></span>Webapps
         <span></span>SEO

@@ -8,7 +8,7 @@ const MOBILE_NAV_ITEMS = [
   },
   {
     id: 1,
-    navTitle: "work",
+    navTitle: "projects",
   },
   {
     id: 2,
@@ -45,7 +45,7 @@ export function Menu({ isOpen, toggle, ulVariant, liVariant }) {
   //     <ul style={{}}>
   //       <li
   //         onClick={toggle}>
-  //         <Link to="/work">Work</Link>
+  //         <Link to="/projects">Work</Link>
   //       </li>
   //       <li
   //         onClick={toggle}>
