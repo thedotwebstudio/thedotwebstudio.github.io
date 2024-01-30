@@ -55,9 +55,6 @@ const HeroBanner = () => {
         <TextReveal delay={0.75}>
           <div className="cta">
             <button className=" ">DISCOVER OUR WORK</button>
-            {/* <Link to="projects" className=" ">
-            DISCOVER OUR WORK
-          </Link> */}
           </div>
         </TextReveal>
       </div>

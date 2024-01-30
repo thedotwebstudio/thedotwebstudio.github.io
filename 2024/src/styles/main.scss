@@ -24,6 +24,9 @@ body.loading {
 .container {
   max-width: 1440px;
   margin: 0 auto;
+  @media screen and (max-width: 811px) {
+    max-width: 100%;
+  }
 }
 .loading-container {
   z-index: 99;

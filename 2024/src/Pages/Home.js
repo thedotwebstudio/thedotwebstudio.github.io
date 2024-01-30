@@ -24,7 +24,7 @@ function Home() {
       {/* <Marquee /> */}
       <Experties />
  
-      <ProjectsCard cardLength={3} />
+      <ProjectsCard page="home" cardLength={1} />
 
       <SayHello />
     </motion.div>

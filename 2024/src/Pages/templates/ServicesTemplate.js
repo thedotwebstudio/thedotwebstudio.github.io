@@ -10,6 +10,7 @@ import SayHello from "./../../components/SayHello";
 //DATA
 import { ServicesData } from "../../data/services.js";
 import ProjectsList from "../../components/ProjectsList.js";
+import ProjectsCard from "../../components/Projects/ProjectCard.js";
 
 function ServicesTemplate() {
   const location = useLocation();
@@ -49,9 +50,9 @@ function ServicesTemplate() {
 
       <ServiceProcess data={filtered} />
 
-      <ServiceCaseStudies data={filtered} />
-
-      <ProjectsList />
+      {/* <ServiceCaseStudies data={filtered} /> */}
+      {/* <ProjectsList /> */}
+      <ProjectsCard/>
 
       <SayHello />
     </div>

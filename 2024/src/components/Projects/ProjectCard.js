@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import { ProjectsData } from "../../data/projects.js";
 import ARROW_SVG from "../../svg/arrow-up-right.svg";
 import { useLocation } from "react-router-dom";
+import TextReveal from "../TextReveal.js";
 
-function ProjectsCard({ cardLength }) {
+function ProjectsCard({ cardLength, page }) {
   const location = useLocation();
 
   useEffect(() => {
@@ -13,7 +14,7 @@ function ProjectsCard({ cardLength }) {
     console.log("Location changed!", location.pathname);
   }, [location]);
 
-  const listItems = ProjectsData.map((item) => (
+  const projectList = ProjectsData.map((item, i) => (
     <motion.li
       key={item.name}
       initial={{ opacity: 0, y: 20 }}
@@ -22,39 +23,63 @@ function ProjectsCard({ cardLength }) {
         duration: 0.4,
         ease: [0.25, 0.25, 0, 1],
         delay: 0.75,
-      }}>
-      <Link
-        to={
-          location.pathname === "/projects"
-            ? `${item.slug}`
-            : `projects/${item.slug}`
-        }
-        className="card"
-        style={{ background: item.brand_color[0] }}>
-        {item.logo_url && <img src={item.logo_url} alt="" height={36} />}
-        <h6 className="title">{item.name}</h6>
-        <p>{item.short_dis} </p>
-        <p>
-          <img src={ARROW_SVG} alt="" height={36} />
-        </p>
-        <div className="services">
-          <ul>
-            <li>
-              {item.services.map((item, i) => (
-                <span key={i}>{item} &nbsp;</span>
-              ))}
-            </li>
-          </ul>
+      }}
+      // style={{ background: item.brand_color[0] }}
+    >
+      {item.slug === "starstake"}
+      <div className="card">
+        {/* DETAILS */}
+        <div
+          className="page-img"
+          style={{ backgroundImage: `url(${item.images.iphone})` }}></div>
+        {/* DETAILS */}
+        <div className="page-details">
+          <h6 className="title">
+            {item.name}
+          </h6>
+          <p>{item.short_dis} </p>
+          <p></p>
+          <div className="services-labels">
+            {item.services.map((item, i) => (
+              <small key={i}>{item} &nbsp;</small>
+            ))}
+          </div>
+          {/* //LINK */}
+          <Link to={page === "home" ? `projects/${item.slug}` : `${item.slug}`}>
+            <img src={ARROW_SVG} alt="" height={36} />
+          </Link>{" "}
         </div>
-      </Link>
+      </div>
     </motion.li>
   ));
   return (
-    <div className="container">
-      <nav className="nav-services">
-        <ul className="cards">{listItems}</ul>
-      </nav>
-    </div>
+    <motion.section
+      className={page === "home" ? `project-card ${page}` : "project-card"}>
+      <div className="container">
+        <div className="content-wrapper">
+          {page && (
+            <TextReveal delay={0.75}>
+              <h3>
+                Featured projects<span className="dot">.</span>
+              </h3>
+            </TextReveal>
+          )}
+        </div>
+        <TextReveal delay={0.75}>
+          <div
+            className={
+              page === "home" ? `nav-services ${page}` : "nav-services"
+            }>
+            <ul className="cards">{projectList}</ul>
+          </div>
+        </TextReveal>
+        <TextReveal delay={0.25}>
+          <div className="cta">
+            <Link to='/projects'  className="">VIEW ALL PROJECTS</Link>
+          </div>
+        </TextReveal>
+      </div>
+    </motion.section>
   );
 }
 export default ProjectsCard;

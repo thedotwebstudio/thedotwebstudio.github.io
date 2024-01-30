@@ -22,8 +22,8 @@ export default function AnimatedWord({ value }) {
 
   return (
     <>
-      <motion.div className="progress-bar" style={{ scaleX }} />
-      <h2 className="anim-word" ref={ref}>
+      {/* <motion.div className="progress-bar" style={{ scaleX }} /> */}
+      <h3 className="anim-word" ref={ref}>
         {words.map((word, i) => {
           const start = i / words.length;
           const end = start + 1 / words.length;
@@ -33,19 +33,21 @@ export default function AnimatedWord({ value }) {
             </SingleWord>
           );
         })}
-      </h2>
+      </h3>
     </>
   );
 }
 const SingleWord = ({ children, range, progress }) => {
   const opacity = useTransform(progress, range, [0, 1]);
-//   console.log("opacity", opacity);
-//   console.log(range);
+  //   console.log("opacity", opacity);
+  //   console.log(range);
 
   return (
     <span className="word">
       <span className="shadow">{children}</span>
-      <motion.span className="" style={{ opacity: opacity }}>{children}</motion.span>
+      <motion.span className="" style={{ opacity: opacity }}>
+        {children}
+      </motion.span>
     </span>
   );
 };

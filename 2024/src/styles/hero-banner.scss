@@ -1,6 +1,6 @@
 @keyframes animatedBackground {
   from {
-    background-position: -115%  10%;
+    background-position: -115% 10%;
     // background-size: 50%;
     // scale:1;
     // transform: rotate(0deg);
@@ -70,6 +70,7 @@
     text-align: center;
     margin-bottom: 2rem;
   }
+  //MEDIA QUERIES
   @media screen and (min-width: 810px) and (max-width: 1439px) {
     // font-size: 15px;
     padding-left: 4rem;
@@ -83,8 +84,11 @@
     padding-left: 2rem;
     padding-right: 2rem;
     // background-position: -25% -50%;
+    // min-height: 60vh;
+    min-height: calc(100vh - 60px);
+
     .cta {
-      margin-bottom: 4rem;
+      margin-bottom: 0rem;
     }
     h1 {
       font-size: 3.5rem;

@@ -9,7 +9,7 @@ function Work() {
     <motion.div className="projects-section">
       <div className="container">
         <div className="projects-banner">
-          <h1>We choose a different {"->"} starting point</h1>
+          <h3>Projects <span className="dot" >.</span></h3>
           <p>
             Each project is an opportunity to innovate. To view challenges
             through a new lens. To venture into uncharted territory for the

@@ -16,12 +16,13 @@ function ServicesCard() {
         delay: 3,
       }}>
       <Link to={item.slug} className="card shadow">
-        <h5 className="title">{item.name}</h5>
-        <p>{item.short_dis} </p>
-        <span>
-          <img src={ARROW_SVG} alt="" height={36} />
-        </span>
-        {/* <div className="discover">Discover this service</div> */}
+        <figure>
+          <img src={item.icon} alt="" />
+        </figure>
+        <div className="details">
+          <h5 className="title">{item.name}</h5>
+          <p>{item.short_dis} </p>
+        </div>
       </Link>
     </motion.li>
   ));

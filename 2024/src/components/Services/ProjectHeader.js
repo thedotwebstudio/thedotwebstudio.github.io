@@ -9,10 +9,10 @@ const ProjectHeader = (props) => {
       {service && (
         <>
           <div className="icon">
-            {/* <img src={ICON} alt="" /> */}
+            {/* <img src={service.icon} alt="" />  */}
           </div>
           <div className="name">
-            <h1>{service.name}</h1>
+            <h1>{service.name}sss</h1>
             <p>{service.tagline}</p>
           </div>
         </>

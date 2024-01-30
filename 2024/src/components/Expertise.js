@@ -12,7 +12,7 @@ const Experties = () => {
             <h6> Expertise </h6>
           </TextReveal>
           <TextReveal delay={0.5}>
-            <h3>What we can do for you!</h3>
+            <h3>What we can do for you<span className="dot">!</span></h3>
           </TextReveal>
           <TextReveal delay={0.75}>
             <p>

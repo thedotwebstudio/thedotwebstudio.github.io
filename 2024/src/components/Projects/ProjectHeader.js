@@ -35,9 +35,9 @@ const ProjectHeader = (props) => {
               </Link>
               {/* <img src={ARROW_SVG} alt="" height={36} /> */}
             </div>
-            {/* <div className="right">
-              <img alt="browser" src={project.images.browser} width="100%" />
-            </div> */}
+              <div className="right">
+              <img alt="browser" src={project.logo_url} width="100%" />
+            </div> 
           </div>
           {/* IF DESIGN IMG IS IN THE OBJ  */}
           {project.images.design !== "" && (

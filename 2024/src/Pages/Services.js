@@ -10,20 +10,36 @@ import TextReveal from "../components/TextReveal";
 
 function Services() {
   return (
-    <motion.div className="page-wrapper">
-      <Achivment />
-      <Experties />
-      {/* <HorizontalScroll /> */}
-      <div>
-        <TextReveal delay={0.25}>
-          <h6> Case Studies</h6>
-        </TextReveal>
-        <TextReveal delay={0.5}>
-          <h3>Selected Works</h3>
-        </TextReveal>
+    <motion.div className="services-section">
+      <div className="container">
+        <div className="services-banner">
+          <h3>Services<span className="dot" >.</span></h3>
+          <p>
+            Each project is an opportunity to innovate. To view challenges
+            through a new lens. To venture into uncharted territory for the
+            first time.
+          </p>
+        </div>
+
+        {/* <Achivment /> */}
+        <Experties />
+        {/* <HorizontalScroll /> */}
+
+        <div>
+          {/* 
+            <TextReveal delay={0.25}>
+              <h6> Case Studies</h6>
+            </TextReveal>
+            <TextReveal delay={0.5}>
+              <h3>Selected Works</h3>
+            </TextReveal> 
+          */}
+        </div>
+
+        <ProjectsCard cardLength={3} />
+
+        <SayHello />
       </div>
-      <ProjectsCard cardLength={3} />
-      <SayHello />
     </motion.div>
   );
 }

@@ -1,14 +1,14 @@
 export const ServicesData = [
   {
     id: 0,
-    name: "Website",
+    name: "Web design",
     slug: "website",
     fullname: "Website creation on measure",
     tagline:
       "Seeing is believing - and we see a bright future in front of you.",
     short_dis:
       "Custom Wordpress website design, landing page, E-Commerce, hosting,SEO, etc.",
-    icon: "",
+    icon: require("../svg/64x64-web-design.png"),
     approach: {
       title: "Each project is unique!",
       description:
@@ -76,7 +76,7 @@ export const ServicesData = [
 
     short_dis:
       "Design of tailor-made web applications, automation, API connection, intranet, etc.",
-    icon: "",
+    icon: require("../svg/64x64-development.png"),
     approach: {
       title: "Optimization at its full potential",
       description:
@@ -155,10 +155,9 @@ export const ServicesData = [
     slug: "design-branding",
     fullname: "Design & Branding",
     tagline: "Your true self - by us",
-
     short_dis:
       "Creation of a unique visual identity and variation in business cards, leaflets, promotional articles, banners, etc.",
-    icon: "",
+    icon: require("../svg/64x64-branding.png"),
     approach: {
       title: "Our design expertise is at your disposal.",
       description:
@@ -221,8 +220,8 @@ export const ServicesData = [
     tagline: "Get in touch with your audience.",
     short_dis:
       "Management of your social networks and content creation: text, photos, videos, advertising campaigns, etc.",
-    icon: "",
-    approach: {
+      icon: require("../svg/64x64-social-media.png"),
+      approach: {
       title:
         "Our web agency is proud to be associated with BDK, a passionate and experienced team, who will do everything possible to offer you exceptional results.",
       description:

@@ -9,10 +9,10 @@ const ServiceHeader = (props) => {
       {service && (
         <>
           <div className="icon">
-            {/* <img src={ICON} alt="" /> */}
+            <img src={service.icon} alt="" /> 
           </div>
           <div className="name">
-            <h1>{service.name}</h1>
+            <h3>{service.name}</h3>
             <p>{service.tagline}</p>
           </div>
         </>
