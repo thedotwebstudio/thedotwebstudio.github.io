@@ -20,7 +20,7 @@ export const ProjectsData = [
     images: {
       desktop: require("../images/projects/starstake/desktop.png"),
       browser: require("../images/projects/starstake/browser-preview.png"),
-      designs: require("../images/projects/starstake/designs.jpg"),
+      designs: require("../images/projects/starstake/designs.png"),
       mobile: require("../images/projects/starstake/mobile.png"),
       iphone: require("../images/projects/starstake/iPhone_15.png"),
       laptop: require("../images/projects/starstake/laptop.png"),
@@ -46,7 +46,7 @@ export const ProjectsData = [
     images: {
       desktop: require("../images/projects/blackant/desktop.png"),
       browser: require("../images/projects/blackant/browser-preview.png"),
-      designs: require("../images/projects/blackant/designs.jpg"),
+      designs: require("../images/projects/blackant/designs.png"),
       mobile: require("../images/projects/blackant/mobile.png"),
       iphone: require("../images/projects/blackant/iPhone_15.png"),
       laptop: require("../images/projects/blackant/laptop.png"),
@@ -72,7 +72,7 @@ export const ProjectsData = [
     images: {
       desktop: require("../images/projects/amfah/desktop.png"),
       browser: require("../images/projects/amfah/browser-preview.png"),
-      designs: require("../images/projects/amfah/designs.jpg"),
+      designs: require("../images/projects/amfah/designs.png"),
       mobile: require("../images/projects/amfah/mobile.png"),
       iphone: require("../images/projects/amfah/iPhone_15.png"),
       laptop: require("../images/projects/amfah/laptop.png"),
