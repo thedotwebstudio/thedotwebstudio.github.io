@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="$black" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <!--
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon"
+    href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1" />
+  <meta name="theme-color"
+    content="$black" />
+  <meta name="description"
+    content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon"
+    href="%PUBLIC_URL%/logo192.png" />
+  <link rel="apple-touch-icon"
+    sizes="180x180"
+    href="/apple-touch-icon.png">
+  <link rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/favicon-32x32.png">
+  <link rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/favicon-16x16.png">
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest"
+    href="%PUBLIC_URL%/manifest.json" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -27,30 +39,47 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>The Dot - Web studio</title>
-    <!-- DO NOT MODIFY -->
-<!-- Quora Pixel Code (JS Helper) -->
-<script>
-  !function(q,e,v,n,t,s){if(q.qp) return; n=q.qp=function(){n.qp?n.qp.apply(n,arguments):n.queue.push(arguments);}; n.queue=[];t=document.createElement(e);t.async=!0;t.src=v; s=document.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s);}(window, 'script', 'https://a.quora.com/qevents.js');
-  qp('init', '687d3c2b91c0442fbbeae68a13031ae1');
-  qp('track', 'ViewContent');
+  <title>The Dot - Web studio</title>
+  <!-- DO NOT MODIFY -->
+  <!-- Quora Pixel Code (JS Helper) -->
+  <script>
+    !function (q, e, v, n, t, s) { if (q.qp) return; n = q.qp = function () { n.qp ? n.qp.apply(n, arguments) : n.queue.push(arguments); }; n.queue = []; t = document.createElement(e); t.async = !0; t.src = v; s = document.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s); }(window, 'script', 'https://a.quora.com/qevents.js');
+    qp('init', '687d3c2b91c0442fbbeae68a13031ae1');
+    qp('track', 'ViewContent');
   </script>
-  <noscript><img height="1" width="1" style="display:none" src="https://q.quora.com/_/ad/687d3c2b91c0442fbbeae68a13031ae1/pixel?tag=ViewContent&noscript=1"/></noscript>
+  <noscript><img height="1"
+      width="1"
+      style="display:none"
+      src="https://q.quora.com/_/ad/687d3c2b91c0442fbbeae68a13031ae1/pixel?tag=ViewContent&noscript=1" /></noscript>
   <!-- End of Quora Pixel Code -->
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6C7V1BDTMX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-6C7V1BDTMX');
-</script>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
+  <!-- For page load events -->
+  <script>qp('track', 'Generic');</script>
+
+  <!-- Add event to the button's click handler -->
+  <script type="text/javascript">
+    qp('track', 'Generic'); // Call this function when inline action happens
+  </script>
+
+  <!-- For events with a conversion value -->
+  <script>qp('track', 'Generic', { value: 4.95 });</script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async
+    src="https://www.googletagmanager.com/gtag/js?id=G-6C7V1BDTMX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-6C7V1BDTMX');
+  </script>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -60,5 +89,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+</body>
+
 </html>
