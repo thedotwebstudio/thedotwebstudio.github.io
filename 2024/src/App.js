@@ -12,6 +12,7 @@ import NoMatch from "./Pages/NoMatch";
 import ServicesTemplate from "./Pages/templates/ServicesTemplate";
 import ProjectTemplate from "./Pages/templates/ProjectTemplate";
 import Services from "./Pages/Services";
+import InitializeGoogleAnalytics from "./utils/google-analytics";
 
 function useScrollToTop() {
   const { pathname } = useLocation();
@@ -27,7 +28,11 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    loading
+    InitializeGoogleAnalytics();
+  });
+
+  useEffect(() => {
+     loading
       ? document.querySelector("body").classList.add("loading")
       : document.querySelector("body").classList.remove("loading");
   }, [loading]);

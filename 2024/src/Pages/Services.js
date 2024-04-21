@@ -7,8 +7,15 @@ import { motion } from "framer-motion";
 import HorizontalScroll from "../components/HorizontalScroll";
 import ProjectsCard from "../components/Projects/ProjectCard";
 import TextReveal from "../components/TextReveal";
+import { TrackGoogleAnalyticsEvent } from "../utils/google-analytics";
 
 function Services() {
+  TrackGoogleAnalyticsEvent(
+    "game_over",
+    "message shown",
+    window.location.pathname + window.location.search,
+    { id: 1234, username: "john" }
+);
   return (
     <motion.div className="services-section">
       <div className="container">
