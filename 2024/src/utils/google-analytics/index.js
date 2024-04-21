@@ -4,7 +4,7 @@ const InitializeGoogleAnalytics = () => {
   // Initialize UA
   ReactGA.initialize("UA-XXXXXXXX-X");
   // Initialize GA4 - Add your measurement ID
-  ReactGA4.initialize("G-XXXXXXXXXX");
+  ReactGA4.initialize("G-6C7V1BDTMX");
 
   console.log("GA INITIALIZED");
 };
