@@ -40,7 +40,7 @@ function ProjectTemplate() {
 
         <ProjectHeader data={filtered} />
 
-        <SayHello />
+        {/* <SayHello /> */}
       </div>
     </div>
   );

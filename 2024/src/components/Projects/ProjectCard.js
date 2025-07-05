@@ -58,7 +58,7 @@ function ProjectsCard({ cardLength, page }) {
       <div className="container">
         <div className="content-wrapper">
           {page && (
-            <TextReveal delay={0.75}>
+            <TextReveal delay={0.50}>
               <h3>
                 Featured projects<span className="dot">.</span>
               </h3>

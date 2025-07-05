@@ -10,6 +10,8 @@
     "motion": "^10.17.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-ga": "^3.3.1",
+    "react-ga4": "^2.1.0",
     "react-router-dom": "^6.21.1",
     "react-scripts": "5.0.1",
     "sass": "^1.69.5",
@@ -41,7 +43,6 @@
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
-  "devDependencies": {},
   "author": "",
   "license": "ISC"
 }

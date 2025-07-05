@@ -25,19 +25,19 @@ const ProjectHeader = (props) => {
               <h2>{project.name}</h2>
               <p>{project.short_dis}</p>
               <br />
+              {/* SKILLS */}
               <ul className="services">
                 {project.services.map((item, i) => (
                   <li key={i}>{item} &nbsp;</li>
                 ))}
               </ul>
-              <Link className="btn-link" to="https://starstake.com/" target="_blank">
-                View <img src={ARROW_SVG} alt="" height={24} />
-              </Link>
+              {/* URL */}
+              <Link className="btn-link" to={project.url} target="_blank">View Project</Link>
               {/* <img src={ARROW_SVG} alt="" height={36} /> */}
             </div>
-              <div className="right">
+            <div className="right">
               <img alt="browser" src={project.logo_url} width="100%" />
-            </div> 
+            </div>
           </div>
           {/* IF DESIGN IMG IS IN THE OBJ  */}
           {project.images.design !== "" && (

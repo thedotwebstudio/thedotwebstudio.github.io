@@ -16,11 +16,7 @@ function Work() {
             first time.
           </p>
         </div>
-        <ProjectsCard cardLength={3} />
-        <SayHello />
-        <SayHello />
-        <SayHello />
-        <SayHello />
+        <ProjectsCard cardLength={4} /> 
       </div>
     </motion.div>
   );

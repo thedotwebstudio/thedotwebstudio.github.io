@@ -5,7 +5,7 @@ import BURGER_SVG from "../images/Hero-Image.jpg";
 const ProjectsList = () => {
   return (
     <motion.section className="project-card-section">
-      {/* <h1> Projects List </h1> */}
+      <h1> Projects List </h1>
       <div>
         <ul className="cards">
           <li>
